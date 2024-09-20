@@ -20,6 +20,9 @@ def update_session(session):
 # ---------------------------- TIMER RESET ------------------------------- #
 
 def reset_timer():
+    """
+    Cancel the countdown timer and reset the app to its initial values.
+    """
     master.after_cancel(timer)
     canvas.itemconfig(timer_text, text=f"00:00")  # padding with zeros
     timer_label.config(text="Timer", fg=GREEN)
